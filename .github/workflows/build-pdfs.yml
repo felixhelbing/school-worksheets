@@ -51,7 +51,4 @@ jobs:
             --title "Latest" \
             --notes "" \
             --target "${{ github.sha }}"
-          release_id=$(gh api "repos/${{ github.repository }}/releases/tags/latest" --jq '.id')
-          gh api --method PATCH "repos/${{ github.repository }}/releases/$release_id" \
-            -F exclude_source_code_archives=true
 
