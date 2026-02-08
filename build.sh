@@ -7,7 +7,7 @@ shopt -s nullglob
 
 BUILDS=(
   "satzbau.typ:in/satzbau:Satzbau"
-  "schreibuebung.typ:in/schreibuebung:Schreibübung"
+  "schreibuebung.typ:in/schreibuebung:Schreibuebung"
 )
 
 for entry in "${BUILDS[@]}"; do
