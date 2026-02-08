@@ -6,8 +6,8 @@ mkdir -p "$OUTDIR"
 shopt -s nullglob
 
 BUILDS=(
-  "template.typ:in/satzbau:Satzbau"
-  "template-abschreiben.typ:in/schreibuebung:Schreibübung"
+  "satzbau.typ:in/satzbau:Satzbau"
+  "schreibuebung.typ:in/schreibuebung:Schreibübung"
 )
 
 for entry in "${BUILDS[@]}"; do
@@ -15,7 +15,7 @@ for entry in "${BUILDS[@]}"; do
 
   for yamlfile in "$indir"/*.yaml; do
     base="$(basename "$yamlfile" .yaml)"
-    outfile="$OUTDIR/${prefix} ${base}.pdf"
+    outfile="$OUTDIR/${prefix}_${base}.pdf"
 
     echo "→ $yamlfile  →  $outfile"
     typst compile --input data="$yamlfile" "$template" "$outfile"
