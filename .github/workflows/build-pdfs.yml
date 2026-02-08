@@ -1,0 +1,56 @@
+name: Build PDFs and publish latest release
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release-latest
+  cancel-in-progress: true
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Typst
+        uses: jcbhmr/setup-typst@v2
+        with:
+          typst-version: "0.14.2"
+
+      - name: Build
+        run: |
+          chmod +x ./build.sh
+          ./build.sh
+
+      - name: Upload
+        uses: actions/upload-artifact@v4
+        with:
+          name: pdfs
+          path: out/*.pdf
+          if-no-files-found: error
+
+      - name: Delete existing release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh release delete latest --yes --cleanup-tag 2>/dev/null || true
+
+      - name: Publish
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: latest
+          name: Latest
+          target_commitish: ${{ github.sha }}
+          files: out/*.pdf
+          fail_on_unmatched_files: true
+          generate_release_notes: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
