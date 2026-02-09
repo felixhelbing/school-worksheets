@@ -5,10 +5,10 @@
   margin: (top: 18mm, bottom: 18mm, left: 18mm, right: 18mm),
 )
 
-#set text(size: 14pt)
+#set text(size: 16pt)
 
 #set par(
-  leading: 0.8em,
-  spacing: 1.2em,
+  leading: 1.0em,
+  spacing: 1.5em,
   justify: false,
 )
