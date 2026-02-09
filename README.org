@@ -1,0 +1,56 @@
+* Schule
+
+Arbeitsblätter für die Grundschule. Generiert mit [[https://typst.app][Typst]].
+
+** Fertige PDFs
+
+Die aktuellen PDFs stehen als Download bereit:
+
+[[https://github.com/felixhelbing/schule/releases/latest][Latest Release (PDFs)]]
+
+Bei jedem Push auf =main= werden die PDFs automatisch neu gebaut und als =latest=-Release veröffentlicht.
+Der Workflow kann bei Bedarf auch manuell über GitHub Actions gestartet werden.
+
+** Kategorien
+
+| Kategorie     | Beschreibung                                      | Links                                                         |
+|---------------+---------------------------------------------------+---------------------------------------------------------------|
+| Satzbau       | Sätze ändern, retten, weiterschreiben, freier Text | [[./satzbau.typ][Template]] · [[./in/satzbau/][Daten]]                 |
+| Schreibuebung | Sätze sauber abschreiben                          | [[./schreibuebung.typ][Template]] · [[./in/schreibuebung/][Daten]] |
+| Wortarten     | Nomen, Verben und Adjektive im Text markieren     | [[./wortarten.typ][Template]] · [[./in/wortarten/][Daten]]         |
+| Leseuebung    | Texte laut vorlesen                               | [[./leseuebung.typ][Template]] · [[./in/leseuebung/][Daten]]       |
+
+** Lokal bauen
+
+*** Quickstart
+
+#+begin_src sh
+./build.sh
+#+end_src
+
+Die erzeugten PDFs liegen danach in =out/=.
+
+*** Voraussetzungen
+
+- Unix-kompatibles System (Linux, macOS, Windows WSL)
+- [[https://typst.app][Typst]] >= 0.14.2
+
+** Struktur
+
+#+begin_example
+in/
+  satzbau/         → satzbau.typ
+  schreibuebung/   → schreibuebung.typ
+  wortarten/       → wortarten.typ
+  leseuebung/      → leseuebung.typ
+#+end_example
+
+Pro Kategorie gibt es ein Typst-Template und ein Eingabeverzeichnis mit YAML-Dateien.
+
+Gemeinsame Einstellungen (Seite, Schrift, Absatz) stehen in =common.typ=.
+
+** Lizenz
+
+Frei nutzbar zur nichtkommerziellen Verwendung.
+
+[[./LICENSE.org][CC BY-NC 4.0]]
