@@ -1,4 +1,5 @@
-#import "common.typ": data
+#import "common.typ": data, template
+#show: template
 
 #let aufgabe(label, inhalt, beschreibung) = [
   *Aufgabe:* #beschreibung

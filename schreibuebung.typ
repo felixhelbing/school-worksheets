@@ -1,4 +1,5 @@
-#import "common.typ": data
+#import "common.typ": data, template
+#show: template
 
 #align(center)[
   #block(below: 12pt)[
