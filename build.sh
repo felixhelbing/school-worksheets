@@ -11,6 +11,7 @@ BUILDS=(
   "wortarten.typ:in/wortarten:Wortarten"
   "leseuebung.typ:in/leseuebung:Leseuebung"
   "subtraktion.typ:in/subtraktion:Subtraktion"
+  "subtraktion-uebertrag.typ:in/subtraktion-uebertrag:Subtraktion_Uebertrag"
 )
 
 for entry in "${BUILDS[@]}"; do
