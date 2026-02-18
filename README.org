@@ -17,7 +17,7 @@ Der Workflow kann bei Bedarf auch manuell über GitHub Actions gestartet werden.
 |------------------------+----------------------------------------------------+-----------------------------------------------------------------------------------|
 | Satzbau                | Sätze ändern, retten, weiterschreiben, freier Text | [[./satzbau.typ][Template]] · [[./in/satzbau/][Daten]]                             |
 | Schreibuebung          | 3 Sätze abschreiben mit Schreiblinien              | [[./schreibuebung.typ][Template]] · [[./in/schreibuebung/][Daten]]                 |
-| Wortarten              | Nomen, Verben und Adjektive im Text markieren      | [[./wortarten.typ][Template]] · [[./in/wortarten/][Daten]]                         |
+| Wortarten              | Nomen, Verben, Adjektive und Artikel unterstreichen | [[./wortarten.typ][Template]] · [[./in/wortarten/][Daten]]                         |
 | Leseuebung             | Texte laut vorlesen                                | [[./leseuebung.typ][Template]] · [[./in/leseuebung/][Daten]]                       |
 | Addition               | Zweistellige Addition ohne Übertrag                | [[./addition.typ][Template]] · [[./in/addition/][Daten]]                           |
 | Addition Übertrag      | Zweistellige Addition mit Übertrag                 | [[./addition-uebertrag.typ][Template]] · [[./in/addition-uebertrag/][Daten]]       |

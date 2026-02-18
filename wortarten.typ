@@ -3,7 +3,7 @@
 
 #titel("Wortarten")
 
-*Aufgabe:* Lies den Text. Unterstreiche alle *Nomen* mit Blau, alle *Verben* mit Rot und alle *Adjektive* mit Grün.
+*Aufgabe:* Lies den Text. Unterstreiche alle *Nomen* mit Blau, alle *Verben* mit Rot, alle *Adjektive* mit Grün und alle *Artikel* mit Schwarz.
 
 #v(10pt)
 
