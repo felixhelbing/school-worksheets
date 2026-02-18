@@ -1,5 +1,3 @@
-#let data = yaml(sys.inputs.data)
-
 #let template(body) = {
   set page(
     paper: "a4",

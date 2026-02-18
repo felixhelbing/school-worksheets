@@ -1,4 +1,4 @@
-#import "common.typ": data, template, titel
+#import "common-data.typ": data, template, titel
 #show: template
 
 #titel("Mathe Subtraktion")
